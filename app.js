@@ -5,12 +5,15 @@ app.use(express.static(__dirname + '/Public'));
 
 const port = 5000;
 app.get('/', function (req, res) {
-
-	res.sendFile(__dirname + '/HTML/home.html');
+	res.sendFile(__dirname + '/views/home.html');
 });
 
 app.get('/about', (req, res) => {
-	res.sendFile(__dirname + '/HTML/about.html');
+	res.sendFile(__dirname + '/views/about.html');
+});
+
+app.get('/books', (req, res) => {
+	res.sendFile(__dirname + '/views/books.html');
 });
 
 app.listen(port, function () {
